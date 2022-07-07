@@ -34,28 +34,37 @@ a {
     padding: 10px 0px;
     background-color: #2E2C2F;
 }
+.encabezado nav {
+    max-width: 1440px;
+}
 .list-navbar {
     list-style: none; 
     width: 40%;
     font-size: 1.2em;
 }
-.log-in-container li {
-    list-style: none; 
-    text-decoration: none;
+.list-navbar li:last-child {
     background-color: #429e69;
     padding: 10px;
     border-radius: 5px;
-    font-size: 1.2em;
     transition: 100ms;
 }
-.log-in-container li:hover {
+.list-navbar li:last-child:hover {
     transform: scale(1.05);
     background-color: #F3E8EE;
+}
+#toggle-menu {
+    display: none;
+}
+.toggle-menu-img {
+    width: 40px;
+    margin-top: 10px;
+    filter: invert();
+    display: none;
 }
 
 /* header`s media query */
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .flex-container {
         flex-direction: column;
         padding: 0;
@@ -63,6 +72,23 @@ a {
     }
     .encabezado {
         padding: 10px 0px;
+    }
+    .list-navbar {
+        position: absolute;
+        background-color: #2E2C2F;
+        flex-direction: column;
+        top: 200px;
+        right: 0;
+        width: 100%;
+        height: calc(100vh - 200px);
+        z-index: 9999;
+        display: none;
+    }
+    #toggle-menu:checked + .list-navbar {
+        display:flex;
+    }
+    .toggle-menu-img {
+        display: flex;
     }
 }
 
@@ -72,6 +98,7 @@ a {
     background-color: #ffffff;
     justify-content: space-around;
     width: 70%;
+    max-width: 1440px;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -147,6 +174,7 @@ a {
     .section-flex-container .info-container {
         width: 90%;
         padding: 10px;
+        margin: auto;
     }
     .section-flex-container .img-container {
         width: 100%;
@@ -201,7 +229,7 @@ a {
 
 /* third section media query */
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     .benefits-container, .steps-container {
         width: 85%;
         padding: 15px;
@@ -217,13 +245,14 @@ a {
     width: 80%;
 }
 .card {
-    width: 30%;
+    width: 10em;
+    height: 10em;
     box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     padding: 5px;
-    margin: 5px;
-    border-radius: 20px;
+    margin: 10px;
+    border-radius: 50%;
     transition: transform 100ms ease-in;
     display: flex;
     justify-content: center;
@@ -233,11 +262,11 @@ a {
 .card:hover {
     transform: scale(1.05);
 }
-.card a {
-    color: #000000;
-}
 .clientes-img {
-    width: 30%;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* fourth section media query */
@@ -248,11 +277,7 @@ a {
         padding-bottom: 20px;
     }
     .card {
-        width: 60%;
-    }
-    .clientes-img {
-        width: 60%;
-        padding-top: 30px;
+        width: 80%;
     }
 }
 
@@ -270,6 +295,7 @@ footer {
 }
 .footer-section {
     width: 60%;
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -401,10 +427,11 @@ footer h4 {
 /* tragos section */
 
 .cards-tragos {
-    width: 80%;
+    width: 90%;
 }
 .trago {
     width: 25%;
+    min-width: 226px;
     box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
@@ -420,15 +447,11 @@ footer h4 {
 .trago:hover {
     transform: scale(1.05);
 }
-.tragos-img-container {
-    width: 90%;
-    height: 90%;
-}
 .tragos-img {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background-size: cover;
+    /* background-size: cover; */
 }
 .trago button {
     padding: 10px;
@@ -438,6 +461,7 @@ footer h4 {
     font-family: 'Abril Fatface', cursive;
     font-size: 1em;
     font-weight: 900;
+    cursor: pointer;
 }
 .trago h5 {
     font-size: 1.3em;
@@ -448,9 +472,6 @@ footer h4 {
 @media (max-width: 425px) {
     .cards-tragos {
         width: 100%;
-    }
-    .trago {
-        width: 60%;
     }
     .trago h5 {
         font-size: 1em;
