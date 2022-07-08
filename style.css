@@ -315,7 +315,7 @@ footer h4 {
 }
 .footer-img-container img {
     width: 50%;
-    max-width: 300px;
+    max-width: 250px;
 }
 .info-footer {
     width: 50%;
@@ -341,7 +341,7 @@ footer h4 {
         justify-content: center;
     }
     .footer-img-container img {
-        width: 80%;
+        width: 50%;
     }
     .footer-section {
         width: 90%;
@@ -363,7 +363,7 @@ footer h4 {
     padding: 60px 80px 60px 80px;
 }
 .section-login-container div:first-child {
-    width: 45%;
+    width: 50%;
     display: flex;
     justify-content: left;
     flex-direction: column;
@@ -371,10 +371,11 @@ footer h4 {
     margin-bottom: auto;
 }
 .section-login-container div:nth-child(2) {
-    width: 30%;
-    height: 30%;
+    width: 35%;
+    height: 35%;
     display: flex;
     justify-content: right;
+    margin: auto 0;
 }
 .thejunglebarLogo {
     width: 100%;
