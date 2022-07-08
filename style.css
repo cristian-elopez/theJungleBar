@@ -36,6 +36,7 @@ a {
 }
 .encabezado nav {
     max-width: 1440px;
+    position: relative;
 }
 .list-navbar {
     list-style: none; 
@@ -77,10 +78,10 @@ a {
         position: absolute;
         background-color: #2E2C2F;
         flex-direction: column;
-        top: 200px;
+        top: 145px;
         right: 0;
         width: 100%;
-        height: calc(100vh - 200px);
+        height: calc(100vh - 250px);
         z-index: 9999;
         display: none;
     }
@@ -89,6 +90,11 @@ a {
     }
     .toggle-menu-img {
         display: flex;
+    }
+    #toggle-menu, .toggle-menu-img {
+        position: absolute;
+        top: 85px;
+        left: 20px;
     }
 }
 
@@ -245,8 +251,8 @@ a {
     width: 80%;
 }
 .card {
-    width: 10em;
-    height: 10em;
+    width: 12em;
+    height: 12em;
     box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     -webkit-box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 2px 5px 23px 0px rgba(0,0,0,0.5);
@@ -275,9 +281,6 @@ a {
     .container-cards {
         width: 90%;
         padding-bottom: 20px;
-    }
-    .card {
-        width: 80%;
     }
 }
 
